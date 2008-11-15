@@ -1,0 +1,294 @@
+14/11/2008 23:13:56 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+14/11/2008 23:14:00 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=344ef3c7ee617ac131ff5b65a6f4e56d
+14/11/2008 23:14:02 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+14/11/2008 23:14:02 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+14/11/2008 23:14:04 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:14:05 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:14:06 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+14/11/2008 23:14:06 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+14/11/2008 23:14:12 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+14/11/2008 23:14:14 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+14/11/2008 23:14:42 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - envoi du message <  test  > a Sylvain Lozano
+14/11/2008 23:14:59 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+14/11/2008 23:15:00 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+14/11/2008 23:15:05 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+14/11/2008 23:15:06 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:19:55 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+14/11/2008 23:19:58 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=5dd45c33101039aa1da03e9ab13ba47c
+14/11/2008 23:19:59 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+14/11/2008 23:20:00 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+14/11/2008 23:20:01 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:20:02 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:21:10 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+14/11/2008 23:21:13 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=aeb7d3444f610cba29a9ec401a96dbe8
+14/11/2008 23:21:15 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+14/11/2008 23:21:15 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+14/11/2008 23:21:16 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:21:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:21:18 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+14/11/2008 23:21:18 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+14/11/2008 23:21:24 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+14/11/2008 23:21:25 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+14/11/2008 23:22:11 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de l'album Me
+14/11/2008 23:22:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:22:21 [SwingWorker-pool-1-thread-31] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+14/11/2008 23:22:44 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de l'album Vacances 2008 - Etape 1 : Beziers
+14/11/2008 23:23:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:24:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:25:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:25:24 [SwingWorker-pool-1-thread-9] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+14/11/2008 23:25:31 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deOuahiba Benhammou
+14/11/2008 23:25:31 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Ouahiba Benhammou
+14/11/2008 23:25:32 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 1 groups pour l'utilisateur Ouahiba Benhammou
+14/11/2008 23:26:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:27:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:28:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:29:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:30:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:30:33 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deJessica QUILLET
+14/11/2008 23:30:33 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Jessica QUILLET
+14/11/2008 23:30:39 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 19 groups pour l'utilisateur Jessica QUILLET
+14/11/2008 23:30:44 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de l'album ? Fist The Funk ?
+14/11/2008 23:31:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:32:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:33:09 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+14/11/2008 23:33:12 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=32942acc9013866163e876b53773dc4d
+14/11/2008 23:33:13 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+14/11/2008 23:33:14 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+14/11/2008 23:33:15 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:33:16 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:33:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+14/11/2008 23:33:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+14/11/2008 23:33:23 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+14/11/2008 23:33:29 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+14/11/2008 23:34:16 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:35:18 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+14/11/2008 23:44:15 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+14/11/2008 23:44:18 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=29500e42ae3888e7de48d19664a45a22
+14/11/2008 23:53:53 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+14/11/2008 23:53:55 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=ce219b98a823c7c25dcd3c07468eb0e3
+14/11/2008 23:53:57 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+14/11/2008 23:53:57 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+14/11/2008 23:53:59 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:53:59 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:54:17 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+14/11/2008 23:54:19 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=34c5d0d7400aa3a98a93e001a0d3445e
+14/11/2008 23:54:21 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+14/11/2008 23:54:21 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+14/11/2008 23:54:22 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:54:23 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+14/11/2008 23:54:26 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+14/11/2008 23:54:27 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+14/11/2008 23:54:32 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+14/11/2008 23:54:34 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+14/11/2008 23:55:16 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - envoi du message <  test  > a Remy Lapleige
+14/11/2008 23:55:26 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 00:05:19 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 00:05:21 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=698cf3b933e7d8106a86cdcdb6abf3cc
+15/11/2008 00:05:23 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 00:05:23 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 00:05:24 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 00:05:24 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 00:05:25 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 00:05:26 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 00:05:31 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 00:05:34 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 00:06:25 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 00:07:05 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deRuddy Marie-emilienne
+15/11/2008 00:07:05 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Ruddy Marie-emilienne
+15/11/2008 00:07:12 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 24 groups pour l'utilisateur Ruddy Marie-emilienne
+15/11/2008 00:07:25 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 11:57:17 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 11:57:20 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=7f5000b6bf7a1d6cf4cea28229765b74
+15/11/2008 11:57:23 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 11:57:24 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 11:58:11 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 11:58:14 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=3b4f0eb46f3acab4a0660aecd782d9f8
+15/11/2008 11:58:16 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 11:58:18 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 11:58:20 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 11:58:20 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 11:58:22 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 11:58:22 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 11:58:28 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 11:58:30 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 11:59:10 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 11:59:12 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=e63fae389d1166dfda7b5b47187cb65f
+15/11/2008 11:59:14 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 11:59:16 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 11:59:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 11:59:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 11:59:18 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 11:59:19 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 11:59:25 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 11:59:26 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 12:08:55 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 12:08:58 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=c81628cc48d77cecb86dfc20562c4a89
+15/11/2008 12:09:00 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 12:09:00 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 12:09:01 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:09:02 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:09:03 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 12:09:03 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 12:09:09 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 12:09:10 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 12:10:02 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:11:02 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:12:02 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:13:02 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:14:02 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:15:02 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:15:57 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deClaire Lamatte
+15/11/2008 12:15:58 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Claire Lamatte
+15/11/2008 12:15:58 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 0 groups pour l'utilisateur Claire Lamatte
+15/11/2008 12:16:02 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:15:23 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deStéphane Pierre
+15/11/2008 12:15:23 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Stéphane Pierre
+15/11/2008 12:15:24 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 7 groups pour l'utilisateur Stéphane Pierre
+15/11/2008 12:46:40 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion a faceboook
+15/11/2008 12:46:40 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Pas encore connecté, connexion en cours
+15/11/2008 12:46:40 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - initialisation du client
+15/11/2008 12:46:44 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Token OK 7db282f0cc5c62ff3907a0a1305c7ec0
+15/11/2008 12:46:44 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Lancement du browser
+15/11/2008 12:46:46 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Browser fermé
+15/11/2008 12:46:51 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:46:51 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:46:53 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 12:46:54 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 12:47:01 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 12:47:04 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 12:47:52 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:48:14 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de l'album ITIN - divers
+15/11/2008 12:48:52 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:49:52 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 12:50:19 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNahima Soussi
+15/11/2008 12:50:19 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nahima Soussi
+15/11/2008 12:50:24 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 3 groups pour l'utilisateur Nahima Soussi
+15/11/2008 13:18:18 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 13:18:22 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=46ec0d18d8e686009a706440f48cc16d
+15/11/2008 13:18:29 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 13:18:31 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 13:18:33 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 13:18:34 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 13:18:36 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 13:18:36 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 13:18:44 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 13:18:49 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 14:44:18 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 14:44:21 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=9b48488109a3718c6c73f2063c63c464
+15/11/2008 14:44:23 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 14:44:23 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 14:44:24 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 14:44:24 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 14:44:25 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 14:44:26 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 14:44:32 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 14:44:36 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 14:45:02 [SwingWorker-pool-1-thread-15] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 14:45:25 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 14:45:34 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de l'album Me
+15/11/2008 14:46:25 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 14:55:38 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 14:55:41 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=f9d051e91f87e933cedfbd2f72c11b27
+15/11/2008 14:55:46 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 14:55:47 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 14:55:48 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 14:55:48 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 14:55:49 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 14:55:49 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 14:55:55 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 14:55:57 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 15:03:01 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 15:03:03 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=249535819357df25887c90a962593895
+15/11/2008 15:03:05 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 15:03:05 [AWT-EventQueue-0] ERROR org.pihen.facebook.dao.FacebookJaxBDaoImpl  - com.google.code.facebookapi.schema.FacebookApiException cannot be cast to com.google.code.facebookapi.schema.SessionInfo
+15/11/2008 15:16:21 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 15:16:24 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=f394ab14377463e66f12f4850d54f75b
+15/11/2008 15:16:26 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 15:16:26 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 15:16:27 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:16:28 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:16:32 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 15:16:32 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:16:38 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:16:40 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 15:18:26 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 15:18:29 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=e248fc640892f8c21af8ed5f7b3ec8b4
+15/11/2008 15:18:32 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 15:18:32 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 15:18:33 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:18:38 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:18:39 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 15:18:39 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:18:40 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:18:43 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 15:19:38 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:21:18 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 15:21:22 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=b6d81d93b744aa7cd5f8753b1f74f17b
+15/11/2008 15:21:28 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 15:21:28 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 15:21:30 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:21:30 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:21:31 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 15:21:32 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:21:37 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:21:39 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 15:22:30 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:27:29 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 15:27:31 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=7216f2ca2ab1803380d95adbeb39f54f
+15/11/2008 15:27:34 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 15:27:35 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 15:27:36 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:27:36 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:27:37 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 15:27:37 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:27:43 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:27:45 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 15:28:36 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:31:12 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 15:31:14 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=1735ed344a34bbd94da921eb4d83dd7e
+15/11/2008 15:31:16 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 15:31:16 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 15:31:17 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:31:18 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:31:18 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 15:31:19 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:31:25 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:31:26 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 15:32:18 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:32:52 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 15:32:55 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=d4b5faeb460aea83ff55d2e56c5b0c9f
+15/11/2008 15:32:56 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 15:32:56 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 15:32:57 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:32:58 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:32:59 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 15:32:59 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:33:05 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:33:07 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 15:34:06 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Connexion en cours
+15/11/2008 15:34:09 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - token=80da205e7597407c6d4a9e1072536fac
+15/11/2008 15:34:10 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - methode POst ok
+15/11/2008 15:34:11 [AWT-EventQueue-0] DEBUG org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Session key is 34bff82ec493c0ae8089d4be-791104736
+15/11/2008 15:34:12 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:34:12 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:34:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des albums deNicolas Pihen
+15/11/2008 15:34:14 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation des groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:34:19 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - recuperation 23 groups pour l'utilisateur Nicolas Pihen
+15/11/2008 15:34:21 [SwingWorker-pool-1-thread-1] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation de la liste d'amis pour Nicolas Pihen
+15/11/2008 15:35:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:36:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:37:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:38:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:39:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:40:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:41:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:42:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:43:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:44:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:45:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:46:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:47:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:48:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:49:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
+15/11/2008 15:50:13 [AWT-EventQueue-0] INFO  org.pihen.facebook.dao.FacebookJaxBDaoImpl  - Recuperation des notifications
