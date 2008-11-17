@@ -61,9 +61,6 @@ public class JXInfoPanel extends JXPanel {
 		this.user = user;
 	}
 
-	public JXTitledPanel getPanneauGénéral() {
-		return panneauGeneral;
-	}
 
 	public void setImgAvatar(JXImageView imgAvatar) {
 		this.imgAvatar = imgAvatar;
