@@ -94,6 +94,7 @@ public class JxDialogWindow extends JInternalFrame {
 				}
 			}
 		} catch(Exception e) {
+			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur",JOptionPane.ERROR_MESSAGE);
 		}
 	}
