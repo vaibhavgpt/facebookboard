@@ -1,0 +1,8 @@
+Exporter un album ou une photo
+Exporter un user ou plusieur
+installation automatique de jaxb dans le endorsed de java
+ascenceur pour le diaporama 
+diaporama automatique
+chat
+fenetre de configuration
+descriptif des groups
