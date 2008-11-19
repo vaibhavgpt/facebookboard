@@ -5,11 +5,9 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
-import javax.swing.ListModel;
 
 import org.jdesktop.swingx.JXEditorPane;
 import org.jdesktop.swingx.JXImageView;

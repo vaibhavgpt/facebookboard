@@ -7,14 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.imageio.ImageIO;
-import javax.swing.JList;
 import javax.swing.SwingWorker;
 
 import org.jdesktop.swingx.JXList;
 import org.jdesktop.swingx.border.DropShadowBorder;
 import org.pihen.facebook.ui.FacebookSwingWindow;
 import org.pihen.facebook.ui.models.JXImageLabelCacheModel;
-
 
 import com.google.code.facebookapi.schema.Photo;
 
@@ -31,8 +29,7 @@ public class JXPhotoBrowser extends JXList {
 	
 	private void initGUI() {
 		setLayoutOrientation(JXList.HORIZONTAL_WRAP);
-		
-		setFixedCellWidth(120);
+		setFixedCellWidth(100);
 		setFixedCellHeight(80);
 		setVisibleRowCount(-1);
 	}
@@ -75,7 +72,6 @@ public class JXPhotoBrowser extends JXList {
 										smallPicImage.setEditable(false);
  										smallPicImage.setBorder(new DropShadowBorder());
 										smallPicImage.setToolTipText(pic.getCaption());
-										//smallPicImage.setPreferredSize(new java.awt.Dimension(120, 80));
 										model.getPhotos().add(smallPicImage);
 										
 							publish((Photo[]) arrayTemp.toArray(new Photo[arrayTemp.size()]));

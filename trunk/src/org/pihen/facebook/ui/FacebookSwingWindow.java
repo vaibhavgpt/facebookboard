@@ -17,6 +17,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 import javax.swing.JTabbedPane;
@@ -41,13 +42,14 @@ import org.jdesktop.swingx.decorator.FilterPipeline;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
 import org.jdesktop.swingx.decorator.PatternFilter;
 import org.pihen.facebook.exporters.friends.ExcelExporter;
+import org.pihen.facebook.exporters.images.PhotosExporter;
 import org.pihen.facebook.services.FacebookServiceImpl;
 import org.pihen.facebook.services.IFacebookService;
 import org.pihen.facebook.ui.chat.JXFBChatWindow;
 import org.pihen.facebook.ui.models.AlbumsCacheModel;
 import org.pihen.facebook.ui.models.FriendsTableCacheModel;
-import org.pihen.facebook.ui.photos.JXPhotoPanel;
 import org.pihen.facebook.ui.photos.JXPhotoBrowser;
+import org.pihen.facebook.ui.photos.JXPhotoPanel;
 import org.pihen.facebook.util.PropertiesFileManager;
 
 import com.google.code.facebookapi.schema.Album;
@@ -548,13 +550,31 @@ public class FacebookSwingWindow extends JXFrame {
 	}
 
 	private void selectionAlbumMouseClicked(MouseEvent evt) {
-		Album a = ((AlbumsCacheModel) listeAlbums.getModel()).getAlbums().get(((JXList)evt.getComponent()).getSelectedIndex());
-		jxPicturesBrowserPanel.removeAll();
-		try {
-			jxPicturesBrowserPanel.setPhotosToPanel(service.getPhotos(a));
-		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur",JOptionPane.ERROR_MESSAGE);
-		} 
+		
+		final Album a = ((AlbumsCacheModel) listeAlbums.getModel()).getAlbums().get(((JXList)evt.getComponent()).getSelectedIndex());
+		
+		
+		if(evt.getButton() == MouseEvent.BUTTON3) {
+			// Création d'un JPopupMenu
+			JPopupMenu labelPopupMenu = new JPopupMenu();
+			JMenuItem item = new JMenuItem("Exporter");
+			item.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent evt) {
+					new JXExporterWindow(a);
+				}
+			});
+			labelPopupMenu.add(item);
+			labelPopupMenu.show(evt.getComponent(), evt.getX(), evt.getY());
+		}
+		else
+		{
+				jxPicturesBrowserPanel.removeAll();
+				try {
+					jxPicturesBrowserPanel.setPhotosToPanel(service.getPhotos(a));
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, e.getMessage(),"erreur",JOptionPane.ERROR_MESSAGE);
+				}
+		}
 	}
 
 	public JXPhotoPanel getJxImagePanel() {

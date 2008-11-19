@@ -131,11 +131,9 @@ public class ConfigurationWindow extends JDialog {
 			manager.setProperty("api_key", txtApiKey.getText());
 			manager.setProperty("browser", txtBrowser.getText());
 			manager.save();
-		} catch (FileNotFoundException e) {
+		} catch (Exception e) {
 			JOptionPane.showMessageDialog(this, e.getMessage(),"erreur",JOptionPane.ERROR_MESSAGE);
-		} catch (IOException e) {
-			JOptionPane.showMessageDialog(this, e.getMessage(),"erreur",JOptionPane.ERROR_MESSAGE);
-		}
+		} 
 		this.dispose();
 	}
 

@@ -121,6 +121,7 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 			    logger.debug("Browser fermé");			    		    
 			    session = client.auth_getSession(auth);
 			    
+			    //initialisation du client pour le chat'
 			    xmlClient= new FacebookXmlRestClient(propertiesManager.getProperty("api_key"),propertiesManager.getProperty("secret"),session);
 			    
 			    isConnected = true;
