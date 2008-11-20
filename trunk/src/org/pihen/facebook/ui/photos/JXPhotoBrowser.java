@@ -44,7 +44,7 @@ public class JXPhotoBrowser extends JXList {
 			public void mouseClicked(MouseEvent evt) {
 				JXList t = (JXList) evt.getComponent();
 				JXThumbnailLabel comp = (JXThumbnailLabel)t.getElementAt(t.getSelectedIndex());
-				FacebookSwingWindow.getInstance().getJxImagePanel().setUrlPhoto(comp.getPhoto().getSrcBig());
+				FacebookSwingWindow.getInstance().getJxImagePanel().setUrlPhoto(comp.getPhoto());
 			}
 		});
 

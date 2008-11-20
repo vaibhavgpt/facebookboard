@@ -42,7 +42,6 @@ import org.jdesktop.swingx.decorator.FilterPipeline;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
 import org.jdesktop.swingx.decorator.PatternFilter;
 import org.pihen.facebook.exporters.friends.ExcelExporter;
-import org.pihen.facebook.exporters.images.PhotosExporter;
 import org.pihen.facebook.services.FacebookServiceImpl;
 import org.pihen.facebook.services.IFacebookService;
 import org.pihen.facebook.ui.chat.JXFBChatWindow;
@@ -50,6 +49,7 @@ import org.pihen.facebook.ui.models.AlbumsCacheModel;
 import org.pihen.facebook.ui.models.FriendsTableCacheModel;
 import org.pihen.facebook.ui.photos.JXPhotoBrowser;
 import org.pihen.facebook.ui.photos.JXPhotoPanel;
+import org.pihen.facebook.ui.photos.PhotosExporter;
 import org.pihen.facebook.util.PropertiesFileManager;
 
 import com.google.code.facebookapi.schema.Album;

@@ -2,31 +2,24 @@ package org.pihen.facebook.ui.photos;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 
 import javax.imageio.ImageIO;
-import javax.swing.JSplitPane;
 
 import org.jdesktop.swingx.JXPanel;
 import org.jdesktop.swingx.graphics.ReflectionRenderer;
 import org.jdesktop.swingx.painter.MattePainter;
 import org.jdesktop.swingx.util.PaintUtils;
+import org.pihen.facebook.ui.FacebookSwingWindow;
+
+import com.google.code.facebookapi.FacebookException;
+import com.google.code.facebookapi.schema.Photo;
+import com.google.code.facebookapi.schema.PhotoTag;
 
 
 
-
-/**
-* This code was edited or generated using CloudGarden's Jigloo
-* SWT/Swing GUI Builder, which is free for non-commercial
-* use. If Jigloo is being used commercially (ie, by a corporation,
-* company or business for any purpose whatever) then you
-* should purchase a license for each developer using Jigloo.
-* Please visit www.cloudgarden.com for details.
-* Use of Jigloo implies acceptance of these licensing terms.
-* A COMMERCIAL LICENSE HAS NOT BEEN PURCHASED FOR
-* THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
-* LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
-*/
 public class JXPhotoPanel extends JXPanel {
 	
 	
@@ -35,7 +28,7 @@ public class JXPhotoPanel extends JXPanel {
 
 	private BufferedImage origImg=null;
 	ReflectionRenderer renderer;
-	
+	private Photo p;
 	
 	public JXPhotoPanel()
 	{
@@ -44,16 +37,36 @@ public class JXPhotoPanel extends JXPanel {
 	
 	
 
-	public void setUrlPhoto(String urlPhoto) {
-		
+	public void setUrlPhoto(Photo photo) {
+		this.p=photo;
 		try {
-			origImg = ImageIO.read(new URL(urlPhoto));
+			origImg = ImageIO.read(new URL(p.getSrcBig()));
+			printInfo();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
 		repaint();
 	}
 
+	public void printInfo()
+	{
+		try {
+			List<PhotoTag> tags= FacebookSwingWindow.getInstance().getService().getTags(p);
+			for(PhotoTag tag : tags)
+			{
+				System.out.println("x="+tag.getXcoord()+",y="+tag.getYcoord());
+				System.out.println(FacebookSwingWindow.getInstance().getService().getUserById(tag.getSubject()).getName());
+			}
+			
+		} catch (FacebookException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
 	public void paint(Graphics g) {
 		super.paint(g);
 		
