@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.EnumSet;
 import java.util.List;
 
+import javax.swing.JOptionPane;
 import javax.xml.bind.JAXBElement;
 
 import org.apache.commons.httpclient.HttpClient;
@@ -59,7 +60,8 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 	
 	public boolean connect(String login,String password)
 	{
-		try {
+		try 
+		{
 		propertiesManager = new PropertiesFileManager();	
 		logger.debug("Connexion en cours");
 		client =new FacebookJaxbRestClient(propertiesManager.getProperty("api_key"), propertiesManager.getProperty("secret"));

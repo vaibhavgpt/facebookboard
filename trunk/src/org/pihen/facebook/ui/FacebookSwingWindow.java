@@ -106,7 +106,7 @@ public class FacebookSwingWindow extends JXFrame {
 		if(fm.getProperty("first_connect").equals("0")){
 			JXFbLoginDialog login = new JXFbLoginDialog();
 			login.setVisible(true);
-			login.authenticate(service);
+			service.connection(login.getTxtLogin(), login.getTxtPassword());
 		}
 		else
 		{
@@ -457,11 +457,11 @@ public class FacebookSwingWindow extends JXFrame {
 			labCourrier.setText("Courrier non lu :"+ notif.getMessages().getUnread());
 			if(notif.getMessages().getUnread()>0)
 			{
-				temp.append(notif.getMessages().getUnread()).append(" nouveau(x) courrier");
+				temp.append(notif.getMessages().getUnread()).append(" nouveau(x) courrier(s)\n");
 				print=true;
 			}
 			
-			labPokes.setText("Vous avez été poké "+ notif.getPokes().getUnread()+ " fois");
+			labPokes.setText("Vous avez été poké "+ notif.getPokes().getUnread()+ " fois\n");
 			if(notif.getPokes().getUnread()>0)
 			{
 				temp.append("Vous venez d'etre poké");
@@ -499,9 +499,9 @@ public class FacebookSwingWindow extends JXFrame {
 		}
 		catch(Exception e)
 		{
-			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur",JOptionPane.ERROR_MESSAGE);
+			e.printStackTrace();
+			//JOptionPane.showMessageDialog(null, e.getMessage(),"erreur",JOptionPane.ERROR_MESSAGE);
 		}
-		
 	}
 
 	private String getHtmlBeanPresentation(User loggedUser) {
