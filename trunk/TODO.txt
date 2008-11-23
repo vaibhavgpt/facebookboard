@@ -1,4 +1,0 @@
-Exporter un album ou une photo
-Exporter un user ou plusieur
-diaporama automatique
-descriptif des groups

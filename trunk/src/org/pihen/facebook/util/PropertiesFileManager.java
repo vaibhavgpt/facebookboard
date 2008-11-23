@@ -1,9 +1,12 @@
 package org.pihen.facebook.util;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Properties;
 
 public class PropertiesFileManager {
@@ -38,9 +41,9 @@ public class PropertiesFileManager {
 		props.setProperty(key, value.trim());
 	}
 	
-	public void save() throws FileNotFoundException, IOException
+	public void save() throws FileNotFoundException, IOException,URISyntaxException
 	{
-		props.store(new FileOutputStream(CONFIG_FILE), "");
+		props.store(new FileOutputStream(new File(getClass().getResource(CONFIG_FILE).toURI())), "");
 	}
 	
 }

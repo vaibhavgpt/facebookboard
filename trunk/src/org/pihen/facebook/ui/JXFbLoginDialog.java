@@ -154,7 +154,7 @@ public class JXFbLoginDialog extends JDialog {
 		fm.setProperty("last_login", txtLogin.getText());
 		try {
 			fm.save();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur",JOptionPane.ERROR_MESSAGE);
 		}
 		this.dispose();

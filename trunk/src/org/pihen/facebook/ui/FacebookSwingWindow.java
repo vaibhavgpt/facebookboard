@@ -9,6 +9,7 @@ import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -472,6 +473,8 @@ public class FacebookSwingWindow extends JXFrame {
 			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur de Fichier",JOptionPane.ERROR_MESSAGE);
 		} catch (InterruptedException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur de process",JOptionPane.ERROR_MESSAGE);
+		} catch (URISyntaxException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur de configuration",JOptionPane.ERROR_MESSAGE);
 		}
 	}
 
