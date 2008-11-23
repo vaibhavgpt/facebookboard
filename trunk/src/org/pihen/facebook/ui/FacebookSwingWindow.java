@@ -20,11 +20,13 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
 import javax.swing.JSplitPane;
 import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 import javax.swing.UIManager;
+import javax.swing.filechooser.FileFilter;
 
 import org.jdesktop.swingx.JXBusyLabel;
 import org.jdesktop.swingx.JXEditorPane;
@@ -43,7 +45,6 @@ import org.jdesktop.swingx.decorator.FilterPipeline;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
 import org.jdesktop.swingx.decorator.PatternFilter;
 import org.pihen.facebook.exporters.friends.CSVExporter;
-import org.pihen.facebook.exporters.friends.IUserExporter;
 import org.pihen.facebook.services.FacebookServiceImpl;
 import org.pihen.facebook.services.IFacebookService;
 import org.pihen.facebook.ui.chat.JXFBChatWindow;
@@ -51,14 +52,12 @@ import org.pihen.facebook.ui.models.AlbumsCacheModel;
 import org.pihen.facebook.ui.models.FriendsTableCacheModel;
 import org.pihen.facebook.ui.photos.JXPhotoBrowser;
 import org.pihen.facebook.ui.photos.JXPhotoPanel;
-import org.pihen.facebook.ui.photos.PhotosExporter;
 import org.pihen.facebook.util.PropertiesFileManager;
 
 import com.google.code.facebookapi.FacebookException;
 import com.google.code.facebookapi.schema.Album;
 import com.google.code.facebookapi.schema.Notifications;
 import com.google.code.facebookapi.schema.User;
-import com.sun.xml.internal.ws.resources.ModelerMessages;
 
 
 public class FacebookSwingWindow extends JXFrame {
@@ -368,15 +367,6 @@ public class FacebookSwingWindow extends JXFrame {
 			JMenu mnuFichier = new JMenu();
 				mnuFichier.setText("Fichier");
 				
-				JMenuItem mnuQuit = new JMenuItem();
-					mnuQuit.setText("Quitter");
-					mnuQuit.addActionListener(new ActionListener() {
-						public void actionPerformed(ActionEvent evt) {
-							System.exit(0);
-						}
-					});
-					mnuFichier.add(mnuQuit);
-
 				JMenuItem mnuConfig = new JMenuItem();
 					  mnuConfig.setText("Configurer");
 					  mnuConfig.addActionListener(new ActionListener() {
@@ -386,23 +376,45 @@ public class FacebookSwingWindow extends JXFrame {
 						});
 					  mnuFichier.add(mnuConfig);
 					
-				JMenuItem mnuExport = new JMenuItem();
-						  mnuExport.setText("Exporter");
-						  mnuExport.addActionListener(new ActionListener() {
-								public void actionPerformed(ActionEvent evt) {
-									JFileChooser f = new JFileChooser(".");
-									f.showSaveDialog(null);
-									
-									try {
-										File file = f.getSelectedFile();
-										new CSVExporter().exports(((FriendsTableCacheModel)getTableFriends().getModel()).getFriends(), file);
-									} catch (IOException e) {
-										e.printStackTrace();
+				JMenu mnuExport = new JMenu("Exporter");
+						  JMenuItem menuCSVExporter = new JMenuItem("CSV");
+						  		    menuCSVExporter.addActionListener(new ActionListener() {
+									public void actionPerformed(ActionEvent evt) 
+									{
+										JFileChooser f = new JFileChooser(".");
+										f.setFileFilter(new FileFilter(){
+											public boolean accept(File f) {
+												return f.getName().endsWith(".csv");
+											}
+	
+											public String getDescription() {
+												return "(*.csv) Fichiers CSV";
+											}
+										});
+										f.showSaveDialog(null);
+										try {
+											File file = f.getSelectedFile();
+											new CSVExporter().exports(((FriendsTableCacheModel)getTableFriends().getModel()).getFriends(), file);
+										} catch (IOException e) {
+											e.printStackTrace();
+										}
 									}
-								}
-							});
+								});
+						  mnuExport.add(menuCSVExporter);
+						   
+						  
 						  mnuFichier.add(mnuExport);
 						  
+						  mnuFichier.add(new JSeparator());
+				JMenuItem mnuQuit = new JMenuItem();
+							mnuQuit.setText("Quitter");
+							mnuQuit.addActionListener(new ActionListener() {
+								public void actionPerformed(ActionEvent evt) {
+									System.exit(0);
+								}
+							});
+							mnuFichier.add(mnuQuit);
+							
 			menuBar.add(mnuFichier);
 				
 				JMenu mnuLook = new JMenu();
@@ -578,7 +590,7 @@ public class FacebookSwingWindow extends JXFrame {
 			JMenuItem item = new JMenuItem("Exporter");
 			item.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent evt) {
-					new JXExporterWindow(a);
+					new JXAlbumExporterWindow(a);
 				}
 			});
 			labelPopupMenu.add(item);

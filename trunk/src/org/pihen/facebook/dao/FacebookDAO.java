@@ -33,8 +33,6 @@ public interface FacebookDAO {
 	public List<Page> getPages(User u) throws FacebookException, IOException;
 	public List<Event> getEvenements(User u) throws FacebookException,IOException;
 	public List<PhotoTag> getTags(Photo p) throws FacebookException,IOException;
-	
-	
 	public List<User> getOnlineFriends();
 	public boolean sendMessage(User u,String message) throws JSONException, FacebookException, IOException;
 }

@@ -36,7 +36,7 @@ import com.google.code.facebookapi.schema.Photo;
 * THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
 * LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
 */
-public class JXExporterWindow extends JFrame {
+public class JXAlbumExporterWindow extends JFrame {
 	private JProgressBar progressionBarre;
 	private JButton btnSelectionRepertoire;
 	private JButton btnExporter;
@@ -45,12 +45,12 @@ public class JXExporterWindow extends JFrame {
 	private JLabel lblTitreAlbume;
 	private JTextField txtRepertoire;
 	private Album album;
-	private JXExporterWindow instance;
+	private JXAlbumExporterWindow instance;
 	
 	public Album getAlbum() {
 		return album;
 	}
-	public JXExporterWindow(Album a)
+	public JXAlbumExporterWindow(Album a)
 	{
 		this.album=a;
 		instance = this;
@@ -152,6 +152,11 @@ public class JXExporterWindow extends JFrame {
 					{
 						temps.add(p);
 						BufferedImage img = ImageIO.read(new URL(p.getSrcBig()));
+						
+						if(!new File(txtRepertoire.getText()).exists())
+						{
+							new File(txtRepertoire.getText()).createNewFile();
+						}
 						File dest = new File(txtRepertoire.getText()+"/"+p.getPid()+"."+type);
 						ImageIO.write(img,type , dest);
 						publish((Photo[]) temps.toArray(new Photo[temps.size()]));

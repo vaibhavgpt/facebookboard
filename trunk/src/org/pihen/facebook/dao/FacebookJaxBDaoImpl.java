@@ -6,7 +6,6 @@ import java.util.Collection;
 import java.util.EnumSet;
 import java.util.List;
 
-import javax.swing.JOptionPane;
 import javax.xml.bind.JAXBElement;
 
 import org.apache.commons.httpclient.HttpClient;

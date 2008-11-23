@@ -1,6 +1,7 @@
 package org.pihen.facebook.exporters.friends;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
@@ -35,12 +36,6 @@ public class CSVExporter implements IUserExporter{
 		
 	}
 
-	@Override
-	public List<User> restore() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-    
 
 	private String toDescriptiveString(User u,String separator) {
 		StringBuffer temp = new StringBuffer();
@@ -61,6 +56,12 @@ public class CSVExporter implements IUserExporter{
 	@Override
 	public String getExtension() {
 		return "csv";
+	}
+
+	@Override
+	public List<User> restore(File f) throws FileNotFoundException, IOException,ClassNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

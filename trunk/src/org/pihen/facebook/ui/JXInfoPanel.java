@@ -213,7 +213,12 @@ public class JXInfoPanel extends JXPanel {
 		StringBuffer temp = new StringBuffer("");
 		for(WorkInfo wi : user.getWorkHistory().getValue().getWorkInfo())
 		{
-		temp.append("<b>").append(wi.getCompanyName()).append("</b><br/> (").append(wi.getStartDate()).append(") / ").append(wi.getEndDate()).append(")<br/>");
+		temp.append("<b>").append(wi.getCompanyName())
+			 .append("</b><br/> (")
+			 .append(wi.getStartDate()).append(") / ")
+			 .append(wi.getEndDate())
+			 .append(")<br/>");
+			 
 		temp.append("<i>").append(wi.getDescription()).append("</i><br/>");
 		}
 		return temp.toString();

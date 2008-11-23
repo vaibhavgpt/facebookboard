@@ -72,7 +72,9 @@ public class JxDialogWindow extends JInternalFrame {
 							
 							conversationEditorPane.add(jxLabelUserChat);
 							jxLabelUserChat.setText(user.getStatus().getValue().getMessage());
-							jxLabelUserChat.setIcon(new ImageIcon(new URL(user.getPicSquare().getValue())));
+							if(user.getPicSquare().getValue().equals(""));
+								jxLabelUserChat.setIcon(new ImageIcon(new URL(user.getPicSquare().getValue())));
+							
 							jxLabelUserChat.setPreferredSize(new java.awt.Dimension(319, 49));
 							getContentPane().add(jxLabelUserChat, BorderLayout.NORTH);
 						}
