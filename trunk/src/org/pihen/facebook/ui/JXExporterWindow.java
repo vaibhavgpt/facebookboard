@@ -129,7 +129,7 @@ public class JXExporterWindow extends JFrame {
 		if(btnExporter == null) {
 			btnExporter = new JButton();
 			btnExporter.setText("Exporter");
-			btnExporter.setBounds(140, 147, 107, 21);
+			btnExporter.setBounds(149, 147, 88, 21);
 			btnExporter.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent evt) {
 					btnExporterActionPerformed(evt);

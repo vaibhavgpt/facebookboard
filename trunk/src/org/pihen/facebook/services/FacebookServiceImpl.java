@@ -122,7 +122,7 @@ public class FacebookServiceImpl implements IFacebookService {
 	}
 
 	@Override
-	public boolean connectionByBrowser()  throws FacebookException, IOException{
+	public boolean connectionByBrowser()  throws FacebookException, IOException, InterruptedException{
 		return dao.connectByBrowser();
 		
 	}

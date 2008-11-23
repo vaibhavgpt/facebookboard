@@ -8,7 +8,7 @@ import org.pihen.facebook.ui.FacebookSwingWindow;
 public class Launcher {
  
   public static void main(String[] args) throws Exception {
-	  SwingUtilities.invokeLater(new Runnable(){
+	  	  SwingUtilities.invokeLater(new Runnable(){
 		  
 		  public void run(){
 				try {

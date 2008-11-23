@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import javax.xml.bind.JAXBElement;
 
 import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.HttpState;
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.GetMethod;
@@ -58,10 +59,8 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 	
 	
 	
-	public boolean connect(String login,String password)
+	public boolean connect(String login,String password) throws HttpException, IOException, FacebookException
 	{
-		try 
-		{
 		propertiesManager = new PropertiesFileManager();	
 		logger.debug("Connexion en cours");
 		client =new FacebookJaxbRestClient(propertiesManager.getProperty("api_key"), propertiesManager.getProperty("secret"));
@@ -96,22 +95,17 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
         logger.debug("Session key is " + session);
         isConnected= true;
         
-		} catch (Exception e) {
-			logger.error(e.getMessage());
-			isConnected= false;
-		} 
 		return isConnected;
 	}
 	
 	
-	public boolean connectByBrowser() {
+	public boolean connectByBrowser() throws HttpException, IOException, FacebookException, InterruptedException{
 		String auth ;
 		logger.debug("Connexion a faceboook");
 		if(isConnected==false)
 		{
 			logger.debug("Pas encore connecté, connexion en cours");
-			try
-			{
+			
 				propertiesManager = new PropertiesFileManager();
 				logger.debug("initialisation du client");
 			    client =new FacebookJaxbRestClient(propertiesManager.getProperty("api_key"), propertiesManager.getProperty("secret"));
@@ -127,12 +121,6 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 			    xmlClient= new FacebookXmlRestClient(propertiesManager.getProperty("api_key"),propertiesManager.getProperty("secret"),session);
 			    
 			    isConnected = true;
-			}
-			catch(Exception e)
-			{
-			    logger.debug("erreur : " + e.getMessage());
-				isConnected=false;
-			}
 		}
 		return isConnected;
 		

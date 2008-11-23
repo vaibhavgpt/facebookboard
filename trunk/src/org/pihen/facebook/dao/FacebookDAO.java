@@ -3,6 +3,7 @@ package org.pihen.facebook.dao;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.commons.httpclient.HttpException;
 import org.json.JSONException;
 
 import com.google.code.facebookapi.FacebookException;
@@ -19,8 +20,8 @@ import com.google.code.facebookapi.schema.User;
 public interface FacebookDAO {
 
 	public User getUserById(long id) throws FacebookException, IOException;
-	public boolean connect(String mail,String pass);
-	public boolean connectByBrowser();
+	public boolean connect(String mail,String pass) throws HttpException, IOException, FacebookException;
+	public boolean connectByBrowser() throws HttpException, IOException, FacebookException, InterruptedException;
 	public User getLoggedUser() throws FacebookException, IOException;
 	public List<User> getFriends(User u) throws FacebookException, IOException;
 	public int getNbFriends(User u) throws FacebookException, IOException;

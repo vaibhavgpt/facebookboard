@@ -48,8 +48,8 @@ public class FaceBoardSystemTray {
 
     public void displayMessage(String message)
     {
-    	trayIcon.displayMessage("FaceBoard",
-                message,
-                TrayIcon.MessageType.INFO);
+    	 if (SystemTray.isSupported()) {
+    		 trayIcon.displayMessage("FaceBoard",message,TrayIcon.MessageType.INFO);
+    	 }
     }
 }

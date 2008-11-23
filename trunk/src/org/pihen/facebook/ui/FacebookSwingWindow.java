@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -41,7 +42,8 @@ import org.jdesktop.swingx.border.DropShadowBorder;
 import org.jdesktop.swingx.decorator.FilterPipeline;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
 import org.jdesktop.swingx.decorator.PatternFilter;
-import org.pihen.facebook.exporters.friends.ExcelExporter;
+import org.pihen.facebook.exporters.friends.CSVExporter;
+import org.pihen.facebook.exporters.friends.IUserExporter;
 import org.pihen.facebook.services.FacebookServiceImpl;
 import org.pihen.facebook.services.IFacebookService;
 import org.pihen.facebook.ui.chat.JXFBChatWindow;
@@ -52,9 +54,11 @@ import org.pihen.facebook.ui.photos.JXPhotoPanel;
 import org.pihen.facebook.ui.photos.PhotosExporter;
 import org.pihen.facebook.util.PropertiesFileManager;
 
+import com.google.code.facebookapi.FacebookException;
 import com.google.code.facebookapi.schema.Album;
 import com.google.code.facebookapi.schema.Notifications;
 import com.google.code.facebookapi.schema.User;
+import com.sun.xml.internal.ws.resources.ModelerMessages;
 
 
 public class FacebookSwingWindow extends JXFrame {
@@ -98,29 +102,33 @@ public class FacebookSwingWindow extends JXFrame {
 		return instance;
 	}
 	
-	private FacebookSwingWindow() throws Exception {
+	private FacebookSwingWindow() {
 		
 		service = new FacebookServiceImpl();
 		PropertiesFileManager fm = new PropertiesFileManager();
-		
-		if(fm.getProperty("first_connect").equals("0")){
-			JXFbLoginDialog login = new JXFbLoginDialog();
-			login.setVisible(true);
-			service.connection(login.getTxtLogin(), login.getTxtPassword());
-		}
-		else
+		try
 		{
-			if(service.connectionByBrowser())
-				{
-				fm.setProperty("first_connect", "0");
-				fm.save();
-				}
-		}
+			if(fm.getProperty("first_connect").equals("0")){
+				JXFbLoginDialog login = new JXFbLoginDialog();
+				login.setVisible(true);
+				service.connection(login.getTxtLogin(), login.getTxtPassword());
+	
+			}
+			else
+			{
+				if(service.connectionByBrowser())
+					{
+					fm.setProperty("first_connect", "0");
+					fm.save();
+					}
+			}
+			this.setTitle("FaceBoard : " + service.getLoggedUser().getName());
+		
 		
 		this.setDefaultCloseOperation(JXFrame.EXIT_ON_CLOSE);
 		this.setSize(950, 750);
 		this.setLayout(new BorderLayout());
-		this.setTitle("FaceBoard : " + service.getLoggedUser().getName());
+		
 		this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getClassLoader().getResource("img/677166248.png")));
 		this.setLocationRelativeTo(null);
 		
@@ -387,7 +395,7 @@ public class FacebookSwingWindow extends JXFrame {
 									
 									try {
 										File file = f.getSelectedFile();
-										ExcelExporter.exportTable(tableFriends, file);
+										new CSVExporter().exports(((FriendsTableCacheModel)getTableFriends().getModel()).getFriends(), file);
 									} catch (IOException e) {
 										e.printStackTrace();
 									}
@@ -442,7 +450,17 @@ public class FacebookSwingWindow extends JXFrame {
 		this.setVisible(true);
 		
 		systray = new FaceBoardSystemTray();
-		
+		}
+		catch(FacebookException e)
+		{
+			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur Facebook",JOptionPane.ERROR_MESSAGE);
+		} catch (FileNotFoundException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur de Fichier introuvable",JOptionPane.ERROR_MESSAGE);
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur de Fichier",JOptionPane.ERROR_MESSAGE);
+		} catch (InterruptedException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur de process",JOptionPane.ERROR_MESSAGE);
+		}
 	}
 
 	private void initNotifications() {
