@@ -132,6 +132,7 @@ public class FacebookSwingWindow extends JXFrame {
 		this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getClassLoader().getResource("img/677166248.png")));
 		this.setLocationRelativeTo(null);
 		
+		systray = new FaceBoardSystemTray();
 		
 			//creation du label d'attente
 			lblWaiting = new JXBusyLabel();
@@ -462,7 +463,7 @@ public class FacebookSwingWindow extends JXFrame {
 
 		this.setVisible(true);
 		
-		systray = new FaceBoardSystemTray();
+		
 		}
 		catch(FacebookException e)
 		{

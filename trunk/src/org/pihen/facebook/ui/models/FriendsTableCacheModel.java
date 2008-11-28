@@ -1,9 +1,12 @@
 package org.pihen.facebook.ui.models;
 
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import javax.swing.table.AbstractTableModel;
 
@@ -65,10 +68,8 @@ public class FriendsTableCacheModel extends AbstractTableModel {
 	}
 
 	private String formatDate(long time) {
-		SimpleDateFormat format = new SimpleDateFormat("HH:mm.s");
-		
-		
-		return format.format(new Date(time));
+		long val = System.currentTimeMillis() / 1000 - time;
+		return String.valueOf(val);
 	}
 	
 	

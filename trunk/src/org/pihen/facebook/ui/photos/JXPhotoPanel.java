@@ -80,6 +80,7 @@ public class JXPhotoPanel extends JXPanel {
 				{
 					System.out.println("x="+tag.getXcoord()+",y="+tag.getYcoord());
 					System.out.println(FacebookSwingWindow.getInstance().getService().getUserById(tag.getSubject()).getName());
+					
 				}
 			
 		} catch (Exception e) {
