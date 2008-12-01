@@ -85,12 +85,10 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
         logger.debug("methode POst ok");
         
         // fetch session key
-        String session = client.auth_getSession(token);
+        session = client.auth_getSession(token);
 	
         xmlClient= new FacebookXmlRestClient(propertiesManager.getProperty("api_key"),propertiesManager.getProperty("secret"),session);
 		
-        
-        this.session=session;
         logger.debug("Session key is " + session);
         isConnected= true;
         
@@ -239,6 +237,15 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 		}
 		return null;
 	}
+	
+	
+	public List<User> findUserByName(String name)
+	{
+		return null;
+		
+	}
+	
+	
 	
 	public boolean sendMessage(User u,String message) throws JSONException, FacebookException, IOException
 	{

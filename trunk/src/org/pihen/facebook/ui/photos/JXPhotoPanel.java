@@ -39,7 +39,7 @@ public class JXPhotoPanel extends JXPanel {
 
 	private BufferedImage image=null;
 	private Shape selectedShape = null;
-	ReflectionRenderer renderer;
+	private ReflectionRenderer renderer;
 	private Photo p;
 	private Point pointInitial = null;
 	private boolean isCtrlPressed = false;
@@ -80,7 +80,6 @@ public class JXPhotoPanel extends JXPanel {
 				{
 					System.out.println("x="+tag.getXcoord()+",y="+tag.getYcoord());
 					System.out.println(FacebookSwingWindow.getInstance().getService().getUserById(tag.getSubject()).getName());
-					
 				}
 			
 		} catch (Exception e) {

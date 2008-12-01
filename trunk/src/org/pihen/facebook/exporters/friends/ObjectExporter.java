@@ -12,6 +12,9 @@ import java.util.List;
 
 import com.google.code.facebookapi.schema.User;
 
+
+//waiting for serialization of facebook-api-schema model object
+
 public class ObjectExporter implements IUserExporter{
  	
 	public ObjectExporter() { 
