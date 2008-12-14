@@ -1,10 +1,14 @@
 package org.pihen.facebook.ui;
 
+import java.io.File;
+import java.util.Date;
 import java.util.List;
 
 import javax.swing.SwingWorker;
 
+import org.pihen.facebook.exporters.friends.TxtExporter;
 import org.pihen.facebook.ui.models.FriendsTableCacheModel;
+import org.pihen.facebook.util.PropertiesFileManager;
 
 import com.google.code.facebookapi.schema.User;
 
@@ -30,12 +34,14 @@ public class FriendsSwingWorker extends SwingWorker<FriendsTableCacheModel, User
     	window.getLblWaiting().setBusy(false);
     	try {
 			window.getLblWaiting().setText(window.getService().getNbFriends(window.getService().getLoggedUser()) + " amis chargés");
-		} catch (Exception e) {
+			window.getTableFriends().updateUI(); //update the JXTable
+			window.getTableFriends().getFilters().flush(); //initialize de searchEngine
+			window.getChatwindow().getTimer().start(); //start the get online friends timer
+			new TxtExporter().exports(model.getFriends(),new File(new PropertiesFileManager().getProperty("cache_friends_directory")+"/friendsList-"+System.currentTimeMillis()+".txt"));
+			
+    	} catch (Exception e) {
 			e.printStackTrace();
 		} 
-    	window.getTableFriends().updateUI();
-    	window.getTableFriends().getFilters().flush();
-    	window.getChatwindow().getTimer().start();
 	}
 
 	protected void process(List<User> chunks) {

@@ -46,4 +46,6 @@ public interface IFacebookService {
 	public abstract boolean sendMessage(User u,String message) throws FacebookException, IOException, JSONException;
 
 	public abstract boolean connectionByBrowser() throws FacebookException, IOException, InterruptedException;
+	
+	public abstract List<User> compare(List<User> listFriends,List<User> cache);
 }

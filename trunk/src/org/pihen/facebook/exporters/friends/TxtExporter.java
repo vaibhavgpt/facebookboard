@@ -1,20 +1,22 @@
 package org.pihen.facebook.exporters.friends;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.code.facebookapi.schema.User;
 
-public class CSVExporter implements IUserExporter{
+public class TxtExporter implements IUserExporter{
   
-	public CSVExporter() { 
+	public TxtExporter() { 
     	
     }
 
-	@Override
 	public void export(User u, File f) throws IOException {
 		FileWriter out = new FileWriter(f);
 		out.write(toDescriptiveString(u,";")+"\n");
@@ -22,7 +24,6 @@ public class CSVExporter implements IUserExporter{
 		
 	}
 
-	@Override
 	public void exports(List<User> list, File f) throws IOException {
 		  FileWriter out = new FileWriter(f);
 	        for(int i=0; i< list.size(); i++) {
@@ -50,13 +51,30 @@ public class CSVExporter implements IUserExporter{
 	}
 
 	public String getExtension() {
-		return "csv";
+		return "txt";
 	}
 
 	public List<User> restore(File f) throws FileNotFoundException, IOException,ClassNotFoundException {
-		return null;
+		
+		BufferedReader lecteur = new BufferedReader(new FileReader(f));
+		String ligne = lecteur.readLine();
+		List<User> liste = new ArrayList<User>();
+		
+		while(ligne!=null)
+		{
+			String[] elements = ligne.split(";");
+			
+			User u = new User();
+			u.setUid(Long.parseLong(elements[0]));
+			u.setFirstName(elements[1]);
+			u.setLastName(elements[2]);
+			
+			liste.add(u);
+			ligne=lecteur.readLine();
+		}
+			
+		return liste;
 	}
-	
-	
+
 	
 }

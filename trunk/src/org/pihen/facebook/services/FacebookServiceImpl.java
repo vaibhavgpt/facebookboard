@@ -126,6 +126,12 @@ public class FacebookServiceImpl implements IFacebookService {
 		return dao.connectByBrowser();
 		
 	}
+
+	public List<User> compare(List<User> listFriends, List<User> cache) {
+		
+		cache.removeAll(listFriends);
+	    return listFriends;
+	}
 	
 	
 }

@@ -46,6 +46,7 @@ import org.jdesktop.swingx.decorator.FilterPipeline;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
 import org.jdesktop.swingx.decorator.PatternFilter;
 import org.pihen.facebook.exporters.friends.CSVExporter;
+import org.pihen.facebook.exporters.friends.TxtExporter;
 import org.pihen.facebook.services.FacebookServiceImpl;
 import org.pihen.facebook.services.IFacebookService;
 import org.pihen.facebook.ui.chat.JXFBChatWindow;
@@ -265,7 +266,7 @@ public class FacebookSwingWindow extends JXFrame {
 ////////////////////////////////////////////////////////////////////////////////////////////////ONGLET 1 : JXTABLE CONTENANT LES FRIENDS
 				JScrollPane jxTableFriendsScrollerPane = new JScrollPane();
 				
-				FriendsTableCacheModel friendsModele = new FriendsTableCacheModel();
+				final FriendsTableCacheModel friendsModele = new FriendsTableCacheModel();
 
 						tableFriends= new JXTable();					
 						tableFriends.setFilters(new FilterPipeline(filter));
@@ -330,8 +331,13 @@ public class FacebookSwingWindow extends JXFrame {
 				panneauSplitHaut.add(albumsSeperatorPane, JSplitPane.TOP);
 				
 				
-////////////////////////////////////////////////////////////////////////////////////////////////ONGLET 3 : AFFICHAGE DU WALL DE l'UTILISATEUR (impossible car non supporté par l'api)			
-				panneauOnglets.addTab("Wall", null, new JXEditorPane(), null);
+////////////////////////////////////////////////////////////////////////////////////////////////ONGLET 3 : AFFICHAGE DU WALL DE l'UTILISATEUR (impossible car non supporté par l'api)
+				JXEditorPane wall = new JXEditorPane();
+//							wall.setContentType("text/html");
+//							wall.setEditable(false);
+//							wall.setPage("http://iphone.facebook.com/#/home.php");
+				
+				panneauOnglets.addTab("Wall", null, wall, null);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////ONGLET 4 : AFFICHAGE DES NEWS (impossible car non supporté par l'api)			
 				panneauOnglets.addTab("News Feed", null, new JXEditorPane(), null);
@@ -419,6 +425,9 @@ public class FacebookSwingWindow extends JXFrame {
 							
 			menuBar.add(mnuFichier);
 				
+			
+			JMenu mnuTool =new JMenu("Outils");
+			
 				JMenu mnuLook = new JMenu();
 					  mnuLook.setText("Looks");
 						for (int i = 0; i < UIManager.getInstalledLookAndFeels().length; i++) {
@@ -438,12 +447,48 @@ public class FacebookSwingWindow extends JXFrame {
 															});
 				mnuLook.add(plasticPlafItem);
 			
-				menuBar.add(mnuLook);
+				mnuTool.add(mnuLook);
 				
+				
+				
+				//TODO put code to show wich user delete me
+				JMenuItem mnuDelete = new JMenuItem("Who remove Me ?");
+				
+				mnuDelete.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent evt) {
+						try {
+							File lastFile = null;
+							String dir = new PropertiesFileManager().getProperty("cache_friends_directory");
+							File[] friendsCache = new File(dir).listFiles();
+							lastFile=friendsCache[0];
+							for(File f:friendsCache)
+							{
+								if(f.lastModified()<lastFile.lastModified())
+									lastFile = f;
+							}
+							System.out.println(service.compare(friendsModele.getFriends(), new TxtExporter().restore(lastFile)));
+						} catch (FileNotFoundException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (ClassNotFoundException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+				});
+				
+				
+				mnuTool.add(mnuDelete);
+				
+				
+				menuBar.add(mnuTool);
 				
 				JMenu mnuAbout = new JMenu();
 					mnuAbout.setText("?");
-						JMenuItem item = new JMenuItem("about");
+						JMenuItem item = new JMenuItem("About");
 						item.addActionListener(new ActionListener() {
 							public void actionPerformed(ActionEvent evt) {
 								new JXAboutDialog();
@@ -543,7 +588,7 @@ public class FacebookSwingWindow extends JXFrame {
 		temp.append("<html>");
 		temp.append("<img src='").append(loggedUser.getPicSquare().getValue()).append("'/> ");
 		temp.append("<b>").append(loggedUser.getLastName()).append(" ").append(loggedUser.getFirstName()).append("</b><br/> (");
-		temp.append("<i>").append(loggedUser.getStatus().getValue().getMessage()).append(" ) </i><br/>");
+		temp.append("<i>").append(loggedUser.getStatus().getValue().getMessage()).append("  </i> ) <br/>");
 		temp.append(loggedUser.getWallCount().getValue()).append(" elements dans le wall<br/>");
 		temp.append("</html>");
 		return temp.toString();
