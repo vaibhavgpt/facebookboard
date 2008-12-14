@@ -32,6 +32,7 @@
     </target>
     <target name="clean">
         <delete dir="bin"/>
+    	<delete dir="cache"/>
     </target>
     <target depends="clean" name="cleanall"/>
     <target depends="init" name="build">
