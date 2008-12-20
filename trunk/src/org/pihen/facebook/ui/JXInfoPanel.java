@@ -135,7 +135,7 @@ public class JXInfoPanel extends JXPanel {
 									ecolePanneau.setTitle("Crusus scolaire");
 									{
 										schoolCacheModel = new SchoolCacheModel(); 
-										//schoolCacheModel.setListSchool(user.getEducationHistory().getValue());
+										//schoolCacheModel.setListSchool(user.getEducationHistory());
 										ecoleScrollPane = new JScrollPane();
 										ecolePanneau.add(ecoleScrollPane, BorderLayout.CENTER);
 										{
@@ -190,7 +190,7 @@ public class JXInfoPanel extends JXPanel {
 		try {
 			panneauCentral.setTitle(user.getName());
 			
-			String url =user.getPicBig().getValue(); 
+			String url =user.getPicBig(); 
 			if(url.equals(""))
 			{
 				url="http://static.ak.fbcdn.net/pics/d_silhouette.gif";
@@ -211,7 +211,7 @@ public class JXInfoPanel extends JXPanel {
 	private String getHtmlWorkInfo() {
 		
 		StringBuffer temp = new StringBuffer("");
-		for(WorkInfo wi : user.getWorkHistory().getValue().getWorkInfo())
+		for(WorkInfo wi : user.getWorkHistory().getWorkInfo())
 		{
 		temp.append("<b>").append(wi.getCompanyName())
 			 .append("</b><br/> (")

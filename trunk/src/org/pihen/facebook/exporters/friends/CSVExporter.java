@@ -39,12 +39,12 @@ public class CSVExporter implements IUserExporter{
 		temp.append(u.getUid()).append(separator);
 		temp.append(u.getFirstName()).append(separator);
 		temp.append(u.getLastName()).append(separator);
-		temp.append((u.getStatus().getValue()!=null)? u.getStatus().getValue().getMessage():"").append(separator);
-		temp.append((u.getSex().getValue()!=null)? u.getSex().getValue():"").append(separator);
-		temp.append((u.getBirthday().getValue()!=null)?u.getBirthday().getValue():"").append(separator);
-		temp.append((u.getCurrentLocation().getValue()!=null)?u.getCurrentLocation().getValue().getState():"").append(separator);
-		temp.append((u.getCurrentLocation().getValue()!=null)?u.getCurrentLocation().getValue().getCountry():"").append(separator);
-		temp.append((u.getCurrentLocation().getValue()!=null)?u.getCurrentLocation().getValue().getCity():"").append(separator);
+		temp.append((u.getStatus()!=null)? u.getStatus().getMessage():"").append(separator);
+		temp.append((u.getSex()!=null)? u.getSex():"").append(separator);
+		temp.append((u.getBirthday()!=null)?u.getBirthday():"").append(separator);
+		temp.append((u.getCurrentLocation()!=null)?u.getCurrentLocation().getState():"").append(separator);
+		temp.append((u.getCurrentLocation()!=null)?u.getCurrentLocation().getCountry():"").append(separator);
+		temp.append((u.getCurrentLocation()!=null)?u.getCurrentLocation().getCity():"").append(separator);
 		
 		return temp.toString();
 	}

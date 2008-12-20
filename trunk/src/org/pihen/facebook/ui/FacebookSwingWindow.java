@@ -596,10 +596,10 @@ public class FacebookSwingWindow extends JXFrame {
 	private String getHtmlBeanPresentation(User loggedUser) {
 		StringBuffer temp = new StringBuffer();
 		temp.append("<html>");
-		temp.append("<img src='").append(loggedUser.getPicSquare().getValue()).append("'/> ");
+		temp.append("<img src='").append(loggedUser.getPicSquare()).append("'/> ");
 		temp.append("<b>").append(loggedUser.getLastName()).append(" ").append(loggedUser.getFirstName()).append("</b><br/> (");
-		temp.append("<i>").append(loggedUser.getStatus().getValue().getMessage()).append("  </i> ) <br/>");
-		temp.append(loggedUser.getWallCount().getValue()).append(" elements dans le wall<br/>");
+		temp.append("<i>").append(loggedUser.getStatus().getMessage()).append("  </i> ) <br/>");
+		temp.append(loggedUser.getWallCount()).append(" elements dans le wall<br/>");
 		temp.append("</html>");
 		return temp.toString();
 	}

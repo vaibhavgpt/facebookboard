@@ -1,12 +1,7 @@
 package org.pihen.facebook.ui.models;
 
-import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
 
 import javax.swing.table.AbstractTableModel;
 
@@ -55,14 +50,14 @@ public class FriendsTableCacheModel extends AbstractTableModel {
 			case 0: return rowIndex;
 			case 1: return friends.get(rowIndex).getLastName();
 			case 2: return friends.get(rowIndex).getFirstName();
-			case 3: return (friends.get(rowIndex).getStatus().getValue() != null ) ?friends.get(rowIndex).getStatus().getValue().getMessage():"";
-			case 4: return friends.get(rowIndex).getSex().getValue();
-			case 5: return friends.get(rowIndex).getBirthday().getValue();
-			case 6: return friends.get(rowIndex).getRelationshipStatus().getValue();
-			case 7: return (friends.get(rowIndex).getCurrentLocation().getValue() != null ) ? friends.get(rowIndex).getCurrentLocation().getValue().getState():"";
-			case 8: return (friends.get(rowIndex).getCurrentLocation().getValue() != null ) ? friends.get(rowIndex).getCurrentLocation().getValue().getCity():"";
-			case 9: return (friends.get(rowIndex).getCurrentLocation().getValue() != null ) ? friends.get(rowIndex).getCurrentLocation().getValue().getCountry():"";
-			case 10: return (friends.get(rowIndex).getStatus().getValue() != null ) ? formatDate(friends.get(rowIndex).getStatus().getValue().getTime()):"";
+			case 3: return (friends.get(rowIndex).getStatus() != null ) ?friends.get(rowIndex).getStatus().getMessage():"";
+			case 4: return friends.get(rowIndex).getSex();
+			case 5: return friends.get(rowIndex).getBirthday();
+			case 6: return friends.get(rowIndex).getRelationshipStatus();
+			case 7: return (friends.get(rowIndex).getCurrentLocation() != null ) ? friends.get(rowIndex).getCurrentLocation().getState():"";
+			case 8: return (friends.get(rowIndex).getCurrentLocation() != null ) ? friends.get(rowIndex).getCurrentLocation().getCity():"";
+			case 9: return (friends.get(rowIndex).getCurrentLocation() != null ) ? friends.get(rowIndex).getCurrentLocation().getCountry():"";
+			case 10: return (friends.get(rowIndex).getStatus() != null ) ? formatDate(friends.get(rowIndex).getStatus().getTime()):"";
 		}
 		return columnIndex;
 	}
