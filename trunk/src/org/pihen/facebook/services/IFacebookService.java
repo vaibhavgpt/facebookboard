@@ -1,9 +1,12 @@
 package org.pihen.facebook.services;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 import org.json.JSONException;
+import org.pihen.facebook.exporters.friends.IUserExporter;
 
 import com.google.code.facebookapi.FacebookException;
 import com.google.code.facebookapi.IFacebookRestClient;
@@ -48,4 +51,7 @@ public interface IFacebookService {
 	public abstract boolean connectionByBrowser() throws FacebookException, IOException, InterruptedException;
 	
 	public abstract List<User> compare(List<User> listFriends,List<User> cache);
+	
+	public abstract List<User> getCachedUser(Date d,IUserExporter exporter) throws FileNotFoundException, IOException, ClassNotFoundException ;
+	
 }

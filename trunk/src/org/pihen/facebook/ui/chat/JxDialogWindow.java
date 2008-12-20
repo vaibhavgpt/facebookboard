@@ -71,7 +71,9 @@ public class JxDialogWindow extends JInternalFrame {
 							jxLabelUserChat = new JXLabel();
 							
 							conversationEditorPane.add(jxLabelUserChat);
-							jxLabelUserChat.setText(user.getStatus().getValue().getMessage());
+							if(user.getStatus().getValue()!=null)
+								jxLabelUserChat.setText(user.getStatus().getValue().getMessage());
+							
 							if(user.getPicSquare().getValue().equals(""));
 								jxLabelUserChat.setIcon(new ImageIcon(new URL(user.getPicSquare().getValue())));
 							

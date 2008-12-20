@@ -1,6 +1,7 @@
 package org.pihen.facebook.ui;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class FriendsSwingWorker extends SwingWorker<FriendsTableCacheModel, User
 			window.getTableFriends().updateUI(); //update the JXTable
 			window.getTableFriends().getFilters().flush(); //initialize de searchEngine
 			window.getChatwindow().getTimer().start(); //start the get online friends timer
-			new TxtExporter().exports(model.getFriends(),new File(new PropertiesFileManager().getProperty("cache_friends_directory")+"/friendsList-"+System.currentTimeMillis()+".txt"));
+			new TxtExporter().exports(model.getFriends(),new File(new PropertiesFileManager().getProperty("cache_friends_directory")+"/friendsList-"+new SimpleDateFormat("ddMMyyyyhhmmss").format(new Date())+".txt"));
 			
     	} catch (Exception e) {
 			e.printStackTrace();

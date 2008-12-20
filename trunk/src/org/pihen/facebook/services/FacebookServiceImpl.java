@@ -1,11 +1,22 @@
 package org.pihen.facebook.services;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import org.json.JSONException;
 import org.pihen.facebook.dao.FacebookDAO;
 import org.pihen.facebook.dao.FacebookJaxBDaoImpl;
+import org.pihen.facebook.exporters.friends.IUserExporter;
+import org.pihen.facebook.exporters.friends.TxtExporter;
+import org.pihen.facebook.util.PropertiesFileManager;
 
 import com.google.code.facebookapi.FacebookException;
 import com.google.code.facebookapi.IFacebookRestClient;
@@ -126,12 +137,29 @@ public class FacebookServiceImpl implements IFacebookService {
 		return dao.connectByBrowser();
 		
 	}
-
+	
+	//en attente de la surcharge de equals et compareto de la classe user
 	public List<User> compare(List<User> listFriends, List<User> cache) {
+		List<User> listdeleted= new ArrayList<User>();
+		listdeleted.addAll(cache);
 		
-		cache.removeAll(listFriends);
-	    return listFriends;
+		for(User l : listFriends)//pour chaque friends actuel
+		{
+			for(User c : cache)
+			{
+				if(c.getUid().intValue()==l.getUid().intValue())
+					listdeleted.remove(c);
+			}
+		}
+		
+	    return listdeleted;
 	}
-	
-	
+
+	public List<User> getCachedUser(Date d,IUserExporter exporter) throws FileNotFoundException, IOException, ClassNotFoundException {
+		File dir = new File(new PropertiesFileManager().getProperty("cache_friends_directory"));
+		SimpleDateFormat format=new SimpleDateFormat("ddMMyyyyhhmmss");
+		File fichier = new File(dir.getAbsolutePath() + "/friendsList-"+format.format(d)+"."+exporter.getExtension());
+		return exporter.restore(fichier);
+		
+	}
 }

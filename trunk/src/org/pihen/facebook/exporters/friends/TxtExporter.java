@@ -63,16 +63,15 @@ public class TxtExporter implements IUserExporter{
 		while(ligne!=null)
 		{
 			String[] elements = ligne.split(";");
-			
+			//TODO completer la les elements du friends
 			User u = new User();
 			u.setUid(Long.parseLong(elements[0]));
 			u.setFirstName(elements[1]);
 			u.setLastName(elements[2]);
-			
+			u.setName(u.getFirstName() + " " + u.getLastName());
 			liste.add(u);
 			ligne=lecteur.readLine();
 		}
-			
 		return liste;
 	}
 

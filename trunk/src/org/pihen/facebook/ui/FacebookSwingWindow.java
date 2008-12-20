@@ -449,37 +449,47 @@ public class FacebookSwingWindow extends JXFrame {
 			
 				mnuTool.add(mnuLook);
 				
-				
-				
-				//TODO put code to show wich user delete me
-				JMenuItem mnuDelete = new JMenuItem("Who remove Me ?");
-				
-				mnuDelete.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent evt) {
-						try {
-							File lastFile = null;
-							String dir = new PropertiesFileManager().getProperty("cache_friends_directory");
-							File[] friendsCache = new File(dir).listFiles();
-							lastFile=friendsCache[0];
-							for(File f:friendsCache)
-							{
-								if(f.lastModified()<lastFile.lastModified())
-									lastFile = f;
-							}
-							System.out.println(service.compare(friendsModele.getFriends(), new TxtExporter().restore(lastFile)));
-						} catch (FileNotFoundException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						} catch (ClassNotFoundException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
+				JMenu mnuDelete = new JMenu("Who remove Me ?");
+					String dir = new PropertiesFileManager().getProperty("cache_friends_directory");
+					File[] friendsCache = new File(dir).listFiles(new java.io.FileFilter(){
+						public boolean accept(File pathname) {
+							if(pathname.isDirectory())
+								return false;
+							if(!pathname.getName().endsWith(".txt"))
+								return false;
+							
+							if(!pathname.getName().startsWith("friendsList-"))
+								return false;
+							
+							return true;
 						}
+						
+					});
+					
+					for(File f : friendsCache){
+						JMenuItem ut = new JMenuItem(f.getName());
+						ut.addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent evt) {
+								String file = ((JMenuItem) evt.getSource()).getText();
+								try {
+									List<User> deleted = service.compare(friendsModele.getFriends(),new TxtExporter().restore(new File(new PropertiesFileManager().getProperty("cache_friends_directory")+"/"+file)));
+									
+									StringBuffer temp = new StringBuffer("Les utilisateurs suivants ne font plus parti de votre liste d'amis :\n");
+									for(User u : deleted)
+									{
+										temp.append(u.getName()).append("\n");
+									}
+									if(deleted.size()>0)
+										JOptionPane.showMessageDialog(null, temp.toString(),"Not Your Friends anymore ;)",JOptionPane.ERROR_MESSAGE);
+									
+								} catch (Exception e) {
+									e.printStackTrace();
+								}
+							}
+						});
+						
+						mnuDelete.add(ut);
 					}
-				});
-				
 				
 				mnuTool.add(mnuDelete);
 				
