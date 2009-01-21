@@ -19,8 +19,8 @@
         <pathelement location="lib/swingx-0.9.4.jar"/>
         <pathelement location="lib/swingx-beaninfo-0.9.4.jar"/>
         <pathelement location="lib/swingx-ws-2008_11_02.jar"/>
-        <pathelement location="lib/facebook-java-api-2.0.4-SNAPSHOT.jar"/>
-        <pathelement location="lib/facebook-java-api-schema-2.0.4-SNAPSHOT.jar"/>
+        <pathelement location="lib/facebook-java-api-2.0.5-SNAPSHOT.jar"/>
+        <pathelement location="lib/facebook-java-api-schema-2.0.5-SNAPSHOT.jar"/>
         <pathelement location="lib/looks-2.1.4.jar"/>
         <pathelement location="lib/swing-layout-1.0.jar"/>
     </path>
