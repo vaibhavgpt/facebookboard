@@ -180,7 +180,7 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 
 	public List<Photo> getPhotos(Album a) throws FacebookException, IOException {
 		logger.info("Recuperation de l'album "+a.getName() );
-		PhotosGetResponse photos = (PhotosGetResponse)client.photos_getByAlbum(a.getAid());
+		PhotosGetResponse photos = (PhotosGetResponse)client.photos_getByAlbum(Long.parseLong(a.getAid()));
 		return photos.getPhoto();
 	}
 
@@ -211,7 +211,7 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 	{
 		logger.info("recuperation des tags de la photo " + p.getPid());
 		Collection<Long> col = new ArrayList<Long>();
-		col.add(p.getPid());
+		col.add(Long.parseLong(p.getPid()));
 		PhotosGetTagsResponse tagsResp = (PhotosGetTagsResponse)client.photos_getTags(col);
 		return tagsResp.getPhotoTag();
 	}
