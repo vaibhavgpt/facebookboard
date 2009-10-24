@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 import javax.swing.ImageIcon;
@@ -54,6 +55,7 @@ import org.pihen.facebook.ui.models.AlbumsCacheModel;
 import org.pihen.facebook.ui.models.FriendsTableCacheModel;
 import org.pihen.facebook.ui.photos.JXPhotoBrowser;
 import org.pihen.facebook.ui.photos.JXPhotoPanel;
+import org.pihen.facebook.util.CacheFileGestionnaire;
 import org.pihen.facebook.util.PropertiesFileManager;
 
 import com.google.code.facebookapi.FacebookException;
@@ -450,8 +452,8 @@ public class FacebookSwingWindow extends JXFrame {
 				mnuTool.add(mnuLook);
 				
 				JMenu mnuDelete = new JMenu("Who remove Me ?");
-					String dir = new PropertiesFileManager().getProperty("cache_friends_directory");
-					File[] friendsCache = new File(dir).listFiles(new java.io.FileFilter(){
+					
+					File[] friendsCache = new CacheFileGestionnaire().getCacheFile().listFiles(new java.io.FileFilter(){
 						public boolean accept(File pathname) {
 							if(pathname.isDirectory())
 								return false;
@@ -472,7 +474,7 @@ public class FacebookSwingWindow extends JXFrame {
 							public void actionPerformed(ActionEvent evt) {
 								String file = ((JMenuItem) evt.getSource()).getText();
 								try {
-									List<User> deleted = service.compare(friendsModele.getFriends(),new TxtExporter().restore(new File(new PropertiesFileManager().getProperty("cache_friends_directory")+"/"+file)));
+									List<User> deleted = service.compare(friendsModele.getFriends(),new TxtExporter().restore(new File(new CacheFileGestionnaire().getCacheFile().getAbsolutePath()+"/"+file)));
 									
 									StringBuffer temp = new StringBuffer("Les utilisateurs suivants ne font plus parti de votre liste d'amis :\n");
 									for(User u : deleted)
@@ -523,8 +525,10 @@ public class FacebookSwingWindow extends JXFrame {
 		catch(FacebookException e)
 		{
 			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur Facebook",JOptionPane.ERROR_MESSAGE);
+			e.printStackTrace();
 		} catch (FileNotFoundException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur de Fichier introuvable",JOptionPane.ERROR_MESSAGE);
+			
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur de Fichier",JOptionPane.ERROR_MESSAGE);
 		} catch (InterruptedException e) {
@@ -532,6 +536,7 @@ public class FacebookSwingWindow extends JXFrame {
 		} catch (URISyntaxException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage(),"erreur de configuration",JOptionPane.ERROR_MESSAGE);
 		}
+		
 	}
 
 	private void initNotifications() {

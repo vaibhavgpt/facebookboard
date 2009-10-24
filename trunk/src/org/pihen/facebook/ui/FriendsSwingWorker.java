@@ -9,6 +9,7 @@ import javax.swing.SwingWorker;
 
 import org.pihen.facebook.exporters.friends.TxtExporter;
 import org.pihen.facebook.ui.models.FriendsTableCacheModel;
+import org.pihen.facebook.util.CacheFileGestionnaire;
 import org.pihen.facebook.util.PropertiesFileManager;
 
 import com.google.code.facebookapi.schema.User;
@@ -38,7 +39,7 @@ public class FriendsSwingWorker extends SwingWorker<FriendsTableCacheModel, User
 			window.getTableFriends().updateUI(); //update the JXTable
 			window.getTableFriends().getFilters().flush(); //initialize de searchEngine
 			window.getChatwindow().getTimer().start(); //start the get online friends timer
-			new TxtExporter().exports(model.getFriends(),new File(new PropertiesFileManager().getProperty("cache_friends_directory")+"/friendsList-"+new SimpleDateFormat("ddMMyyyyhhmmss").format(new Date())+".txt"));
+			new TxtExporter().exports(model.getFriends(),new File(new CacheFileGestionnaire().getCacheFile().getAbsolutePath()+"/friendsList-"+new SimpleDateFormat("ddMMyyyyhhmmss").format(new Date())+".txt"));
 			
     	} catch (Exception e) {
 			e.printStackTrace();
