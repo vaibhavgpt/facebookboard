@@ -64,7 +64,7 @@ public class JXInfoPanel extends JXPanel {
 		this.user = user;
 	}
 
-	public JXTitledPanel getPanneauGénéral() {
+	public JXTitledPanel getPanneauGeneral() {
 		return panneauGeneral;
 	}
 
