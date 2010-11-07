@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="facebookClient">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="facebookClient.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="lib/activation-1.1.jar"/>
+        <pathelement location="lib/commons-logging-1.0.4.jar"/>
+    	<pathelement location="lib/commons-httpclient-3.1.jar"/>
+    	<pathelement location="lib/commons-codec-1.3.jar"/>
+        <pathelement location="lib/jaxb-api-2.1.jar"/>
+        <pathelement location="lib/jaxb-impl-2.1.3.jar"/>
+        <pathelement location="lib/json_simple.jar"/>
+        <pathelement location="lib/json-20070829.jar"/>
+        <pathelement location="lib/log4j-1.2.11.jar"/>
+        <pathelement location="lib/stax-api-1.0-2.jar"/>
+        <pathelement location="lib/swingx-0.9.4.jar"/>
+        <pathelement location="lib/swingx-beaninfo-0.9.4.jar"/>
+        <pathelement location="lib/swingx-ws-2008_11_02.jar"/>
+        <pathelement location="lib/facebook-java-api-2.1.2-SNAPSHOT.jar"/>
+        <pathelement location="lib/facebook-java-api-schema-2.1.2-SNAPSHOT.jar"/>
+        <pathelement location="lib/looks-2.1.4.jar"/>
+        <pathelement location="lib/swing-layout-1.0.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src" excludes="**/*.launch, **/*.java"/>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    	<delete dir="cache"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="init" name="build">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="facebookClient.classpath"/>
+        </javac>
+    </target>
+    <target name="Launcher">
+        <java classname="org.pihen.facebook.main.Launcher" failonerror="true" fork="yes">
+            <jvmarg line="-splash:bin/img/splashScreen.png"/>
+            <classpath refid="facebookClient.classpath"/>
+        </java>
+    </target>
+	<target name="Setup">
+	        <java classname="org.pihen.facebook.ui.setup.SetupFrame" failonerror="true" fork="yes">
+	            <jvmarg line="-splash:bin/img/splashScreen.png"/>
+	            <classpath refid="facebookClient.classpath"/>
+	        </java>
+	</target>
+</project>
