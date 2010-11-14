@@ -3,6 +3,7 @@ package org.pihen.facebook.dao;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.EnumSet;
 import java.util.List;
 
@@ -38,6 +39,7 @@ import com.google.code.facebookapi.schema.PhotoTag;
 import com.google.code.facebookapi.schema.PhotosGetAlbumsResponse;
 import com.google.code.facebookapi.schema.PhotosGetResponse;
 import com.google.code.facebookapi.schema.PhotosGetTagsResponse;
+import com.google.code.facebookapi.schema.StreamData;
 import com.google.code.facebookapi.schema.User;
 import com.google.code.facebookapi.schema.UsersGetInfoResponse;
 
@@ -77,7 +79,6 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 	                post.addParameter(new NameValuePair("pass", password));
 
         http.executeMethod(post);
-        logger.debug("methode POst ok");
         
         // fetch session key
         session = client.auth_getSession(token);
@@ -86,9 +87,11 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
         xmlClient= new FacebookXmlRestClient(propertiesManager.getProperty("api_key"),propertiesManager.getProperty("secret"),session);
 		
         logger.debug("Session key is " + session);
-        isConnected= true;
         
-		return isConnected;
+        isConnected= true;
+        logger.debug("Connexion en cours : " + isConnected);
+        
+		return isConnected; 
 	}
 	
 	public boolean connectByBrowser() throws HttpException, IOException, FacebookException, InterruptedException{
@@ -223,10 +226,16 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 		return null;
 	}
 	
-	public List<User> findUserByName(String name)
+	public boolean changeStatut(String st) throws FacebookException
 	{
-		return null;
+		return client.users_setStatus(st);
 	}
+	
+	public StreamData getNews(Long idUser,List<Long> source_ids,Date start_time,Date end_time) throws FacebookException, IOException
+	{
+		return (StreamData)client.stream_get(idUser, source_ids, start_time, end_time, null, null,null);		
+	}
+	
 	
 	public boolean sendMessage(User u,String message) throws JSONException, FacebookException, IOException
 	{
@@ -236,6 +245,9 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 		return xmlClient.liveMessage_send(u.getUid(), "test", obj);
 	}
 		
+	
+	
+	
 }
 
 	

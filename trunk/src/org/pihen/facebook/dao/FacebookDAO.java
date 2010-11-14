@@ -1,6 +1,7 @@
 package org.pihen.facebook.dao;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.httpclient.HttpException;
@@ -15,6 +16,7 @@ import com.google.code.facebookapi.schema.Notifications;
 import com.google.code.facebookapi.schema.Page;
 import com.google.code.facebookapi.schema.Photo;
 import com.google.code.facebookapi.schema.PhotoTag;
+import com.google.code.facebookapi.schema.StreamData;
 import com.google.code.facebookapi.schema.User;
 
 public interface FacebookDAO {
@@ -33,5 +35,7 @@ public interface FacebookDAO {
 	public List<Event> getEvenements(User u) throws FacebookException,IOException;
 	public List<PhotoTag> getTags(Photo p) throws FacebookException,IOException;
 	public List<User> getOnlineFriends();
+	public boolean changeStatut(String st) throws FacebookException;
 	public boolean sendMessage(User u,String message) throws JSONException, FacebookException, IOException;
+	public StreamData getNews(Long idUser,List<Long> source_ids,Date start_time,Date end_time) throws FacebookException, IOException;
 }

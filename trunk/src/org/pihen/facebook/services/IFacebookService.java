@@ -52,4 +52,5 @@ public interface IFacebookService {
 	
 	public abstract List<User> getCachedUser(Date d,IUserExporter exporter) throws FileNotFoundException, IOException, ClassNotFoundException ;
 	
+	public abstract boolean changeStatut(String st) throws FacebookException;
 }

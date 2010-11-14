@@ -78,16 +78,16 @@ public class Setup extends JDialog{
 		addText("Fichier endorsed =" +dirEndorsed.getAbsolutePath()+ " isDirectory : " + dirEndorsed.isDirectory()+ " existe : " + dirEndorsed.exists());
 		if(!dirEndorsed.exists())
 		{
-			addText("Repertoire inexistant il sera crée");
+			addText("Repertoire inexistant il sera cree");
 			if(dirEndorsed.mkdir())
-				addText("Repertoire crée " + dirEndorsed.exists());
+				addText("Repertoire cree " + dirEndorsed.exists());
 		}
 		else
 		{
-			addText("le repertoire endorsed existe déja");
+			addText("le repertoire endorsed existe deja");
 		}
 
-		addText("Vérification de la librairie JAXB==========================");
+		addText("Verification de la librairie JAXB==========================");
 		addText("Fichier lib JAXB =" +libFile.getAbsolutePath()+ " isFile : " + libFile.isFile()+ " existe : " + libFile.exists());
 		addText("===========================================================");
 		String filename= dirEndorsed+"/"+libFile.getName();
