@@ -5,9 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
@@ -15,14 +12,12 @@ import org.json.JSONException;
 import org.pihen.facebook.dao.FacebookDAO;
 import org.pihen.facebook.dao.FacebookJaxBDaoImpl;
 import org.pihen.facebook.exporters.IUserExporter;
-import org.pihen.facebook.exporters.TxtExporter;
 import org.pihen.facebook.util.PropertiesFileManager;
 
 import com.google.code.facebookapi.FacebookException;
 import com.google.code.facebookapi.IFacebookRestClient;
 import com.google.code.facebookapi.schema.Album;
 import com.google.code.facebookapi.schema.Group;
-import com.google.code.facebookapi.schema.Notifications;
 import com.google.code.facebookapi.schema.Page;
 import com.google.code.facebookapi.schema.Photo;
 import com.google.code.facebookapi.schema.PhotoTag;
@@ -114,6 +109,8 @@ public class FacebookServiceImpl implements IFacebookService {
 			return dao.getTags(p);
 	}
 
+	
+	
 	@Override
 	public List<User> getOnlineFriends() throws FacebookException, IOException {
 		return dao.getOnlineFriends();
@@ -153,5 +150,9 @@ public class FacebookServiceImpl implements IFacebookService {
 		File fichier = new File(dir.getAbsolutePath() + "/friendsList-"+format.format(d)+"."+exporter.getExtension());
 		return exporter.restore(fichier);
 		
+	}
+
+	public boolean changeStatut(String st) throws FacebookException {
+		return dao.changeStatut(st);
 	}
 }
