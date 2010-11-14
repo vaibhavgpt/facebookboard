@@ -37,5 +37,5 @@ public interface FacebookDAO {
 	public List<User> getOnlineFriends();
 	public boolean changeStatut(String st) throws FacebookException;
 	public boolean sendMessage(User u,String message) throws JSONException, FacebookException, IOException;
-	public StreamData getNews(Long idUser,List<Long> source_ids,Date start_time,Date end_time) throws FacebookException, IOException;
+	public StreamData getNews(User u,List<Long> source_ids,Date start_time,Date end_time) throws FacebookException, IOException;
 }

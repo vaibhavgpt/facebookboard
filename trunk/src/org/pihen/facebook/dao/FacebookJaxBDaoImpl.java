@@ -231,9 +231,9 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 		return client.users_setStatus(st);
 	}
 	
-	public StreamData getNews(Long idUser,List<Long> source_ids,Date start_time,Date end_time) throws FacebookException, IOException
+	public StreamData getNews(User idUser,List<Long> source_ids,Date start_time,Date end_time) throws FacebookException, IOException
 	{
-		return (StreamData)client.stream_get(idUser, source_ids, start_time, end_time, null, null,null);		
+		return (StreamData)client.stream_get(idUser.getUid(), source_ids, start_time, end_time, null, null,null);		
 	}
 	
 	

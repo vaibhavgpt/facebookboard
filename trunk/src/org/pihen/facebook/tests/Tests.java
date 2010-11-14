@@ -27,7 +27,7 @@ public class Tests {
 		try {
 			fbDAO.connect("email@email.com","mypassword");
 		
-			StreamData data = fbDAO.getNews(fbDAO.getLoggedUser().getUid(), null, null, null);
+			StreamData data = fbDAO.getNews(fbDAO.getLoggedUser(), null, null, null);
 			Posts p = data.getPosts();
 			
 			List<StreamPost> list = p.getStreamPost();
