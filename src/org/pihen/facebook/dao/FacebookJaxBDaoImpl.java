@@ -49,6 +49,7 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 	private IFacebookRestClient client;
 	private FacebookXmlRestClient xmlClient;
 	private User loggedUser=null;
+	private List<User> friendsCache=null;
 	public static EnumSet<ProfileField> fields =EnumSet.allOf(ProfileField.class);
 	private static Logger logger = Logger.getLogger(FacebookJaxBDaoImpl.class);
 	private PropertiesFileManager propertiesManager ;
@@ -140,24 +141,54 @@ public class FacebookJaxBDaoImpl implements FacebookDAO{
 	}
 
 	public List<User> getFriends(User u) throws FacebookException, IOException {
-		logger.info("Recuperation de la liste d'amis pour " + u.getName() );
-		FriendsGetResponse friendsResp = (FriendsGetResponse)client.friends_get(u.getUid());
-		client.users_getInfo(friendsResp.getUid(),fields);
-		UsersGetInfoResponse uresp =(UsersGetInfoResponse)client.users_getInfo(friendsResp.getUid(), fields);
-		return uresp.getUser();
+		
+		if(friendsCache==null)
+		{
+			logger.info("Recuperation de la liste d'amis pour " + u.getName() );
+			FriendsGetResponse friendsResp = (FriendsGetResponse)client.friends_get(u.getUid());
+			client.users_getInfo(friendsResp.getUid(),fields);
+			UsersGetInfoResponse uresp =(UsersGetInfoResponse)client.users_getInfo(friendsResp.getUid(), fields);
+			friendsCache= uresp.getUser();	
+		}
+		return friendsCache;
+			
+		
 	}
 
 	public int getNbFriends(User u) throws FacebookException, IOException {
-		FriendsGetResponse friendsResp = (FriendsGetResponse)client.friends_get(u.getUid());
-		return friendsResp.getUid().size();
+		if(friendsCache==null)
+		{
+			FriendsGetResponse friendsResp = (FriendsGetResponse)client.friends_get(u.getUid());
+			return friendsResp.getUid().size();
+		}
+		else
+		{
+			return friendsCache.size();
+		}
 	}
 
-	public User getUserById(long id) throws FacebookException, IOException {
-		Collection<Long> users = new ArrayList<Long>();
-		users.add(id);
-		client.users_getInfo(users, fields);
-		UsersGetInfoResponse u =(UsersGetInfoResponse)client.users_getInfo(users, fields);
-		return u.getUser().get(0);
+	public User getUserById(long id, boolean fromCache) throws FacebookException, IOException {
+	
+		if(fromCache)
+		{
+			if(friendsCache ==null)
+				throw new IOException("Le cache est vide");
+			
+			for (User u: friendsCache)
+			{
+				if(u.getUid()==id)
+					return u;
+			}
+		}
+		else
+		{
+			Collection<Long> users = new ArrayList<Long>();
+			users.add(id);
+			client.users_getInfo(users, fields);
+			UsersGetInfoResponse u =(UsersGetInfoResponse)client.users_getInfo(users, fields);
+			return u.getUser().get(0);
+		}
+		return null;
 	}
 	
 	public List<Album> getAlbums(User u) throws FacebookException, IOException {

@@ -79,7 +79,7 @@ public class JXPhotoPanel extends JXPanel {
 				for(PhotoTag tag : tags)
 				{
 					System.out.println("x="+tag.getXcoord()+",y="+tag.getYcoord());
-					System.out.println(FacebookSwingWindow.getInstance().getService().getUserById(tag.getSubject()).getName());
+					System.out.println(FacebookSwingWindow.getInstance().getService().getUserById(tag.getSubject(),true).getName());
 				}
 			
 		} catch (Exception e) {

@@ -47,8 +47,8 @@ public class FacebookServiceImpl implements IFacebookService {
 	/* (non-Javadoc)
 	 * @see org.pihen.facebook.services.IFacebookService#getUserById(long)
 	 */
-	public User getUserById(long id)  throws FacebookException, IOException{
-			return dao.getUserById(id);
+	public User getUserById(long id,boolean fromCache)  throws FacebookException, IOException{
+		return dao.getUserById(id,fromCache);
 	}
 
 	/* (non-Javadoc)
