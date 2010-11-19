@@ -291,12 +291,8 @@ public class FacebookSwingWindow extends JXFrame {
 				
 				
 ////////////////////////////////////////////////////////////////////////////////////////////////ONGLET 3 : AFFICHAGE DU WALL DE l'UTILISATEUR (impossible car non supporte par l'api)
-				JXEditorPane wall = new JXEditorPane();
-							wall.setContentType("text/html");
-							wall.setEditable(false);
-							wall.setPage("http://iphone.facebook.com/#/home.php");
-				
-				panneauOnglets.addTab("Wall", null, wall, null);
+				JXWallPanel wall = new JXWallPanel();
+					panneauOnglets.addTab("Wall", null, wall, null);
 
 		
 ////////////////////////////////////////////////////////////////////////////////////////////////ONGLET 5 : AFFICHAGE DES INFOS DE L'UTILISATEUR SELECTIONNE			

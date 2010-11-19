@@ -21,7 +21,7 @@ import com.google.code.facebookapi.schema.User;
 
 public interface FacebookDAO {
 
-	public User getUserById(long id) throws FacebookException, IOException;
+	public User getUserById(long id,boolean fromCache) throws FacebookException, IOException;
 	public boolean connect(String mail,String pass) throws HttpException, IOException, FacebookException;
 	public boolean connectByBrowser() throws HttpException, IOException, FacebookException, InterruptedException;
 	public User getLoggedUser() throws FacebookException, IOException;

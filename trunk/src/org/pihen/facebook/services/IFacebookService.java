@@ -24,7 +24,7 @@ public interface IFacebookService {
 
 	public boolean connection(String mail,String pass) throws FacebookException, IOException;
 
-	public abstract User getUserById(long id) throws FacebookException, IOException;
+	public abstract User getUserById(long id,boolean fromCache) throws FacebookException, IOException;
 
 	public abstract int getNbFriends(User u) throws FacebookException, IOException;
 
