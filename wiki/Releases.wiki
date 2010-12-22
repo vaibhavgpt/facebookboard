@@ -1,6 +1,0 @@
-#summary Information about available releases
-
-= Release =
-
-v0.1 : first release
-v0.2 : integration of httpclient for authentication
