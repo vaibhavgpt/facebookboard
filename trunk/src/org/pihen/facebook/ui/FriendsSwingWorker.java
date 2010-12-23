@@ -37,7 +37,7 @@ public class FriendsSwingWorker extends SwingWorker<FriendsTableCacheModel, User
     	try {
 			window.getLblWaiting().setText(window.getService().getNbFriends(window.getService().getLoggedUser()) + " amis charg�s");
 			window.getTableFriends().updateUI(); //update the JXTable
-			window.getTableFriends().getFilters().flush(); //initialize de searchEngine
+			//window.getTableFriends().getFilters().flush(); //initialize de searchEngine
 			window.getChatwindow().getTimer().start(); //start the get online friends timer
 			new TxtExporter().exports(model.getFriends(),new File(new CacheFileGestionnaire().getCacheFile().getAbsolutePath()+"/friendsList-"+new SimpleDateFormat("ddMMyyyyhhmmss").format(new Date())+".txt"));
 			

@@ -11,7 +11,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
-import java.util.regex.Pattern;
 
 import javax.swing.JFileChooser;
 import javax.swing.JMenu;
@@ -28,7 +27,6 @@ import javax.swing.UIManager;
 import javax.swing.filechooser.FileFilter;
 
 import org.jdesktop.swingx.JXBusyLabel;
-import org.jdesktop.swingx.JXEditorPane;
 import org.jdesktop.swingx.JXFrame;
 import org.jdesktop.swingx.JXHyperlink;
 import org.jdesktop.swingx.JXLabel;
@@ -40,9 +38,8 @@ import org.jdesktop.swingx.JXTaskPane;
 import org.jdesktop.swingx.JXTaskPaneContainer;
 import org.jdesktop.swingx.JXTitledPanel;
 import org.jdesktop.swingx.border.DropShadowBorder;
-import org.jdesktop.swingx.decorator.FilterPipeline;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
-import org.jdesktop.swingx.decorator.PatternFilter;
+import org.jdesktop.swingx.decorator.PatternMatcher;
 import org.pihen.facebook.exporters.CSVExporter;
 import org.pihen.facebook.exporters.TxtExporter;
 import org.pihen.facebook.services.FacebookServiceImpl;
@@ -76,7 +73,7 @@ public class FacebookSwingWindow extends JXFrame {
 	private JXFBChatWindow chatwindow;
 	
 	private JXTable tableFriends;
-	private PatternFilter filter;
+	private PatternMatcher filter;
 	private static FacebookSwingWindow instance;
 	private FriendsSwingWorker worker;
 	
@@ -205,8 +202,8 @@ public class FacebookSwingWindow extends JXFrame {
 					
 							   panneauRecherche = new JXSearchPanel();
 							   panneauRecherche.setPreferredSize(new java.awt.Dimension(174,89));//dimension du panneau pour ne pas etre trop large
-							   filter = new PatternFilter(".*",Pattern.CASE_INSENSITIVE, 1);
-							   panneauRecherche.setPatternFilter(filter);
+							   //filter = new PatternMatcher(".*",Pattern.CASE_INSENSITIVE, 1);
+							  // panneauRecherche.setPatternFilter(filter);
 							   searchPane.getContentPane().add(panneauRecherche);
 						
 
@@ -228,7 +225,7 @@ public class FacebookSwingWindow extends JXFrame {
 				final FriendsTableCacheModel friendsModele = new FriendsTableCacheModel();
 
 						tableFriends= new JXTable();					
-						tableFriends.setFilters(new FilterPipeline(filter));
+						//tableFriends.setFilters(new FilterPipeline(filter));
 						tableFriends.setSortable(true);
 						tableFriends.setModel(friendsModele);
 						tableFriends.setShowVerticalLines(false);
