@@ -10,9 +10,6 @@
 	<classpathentry kind="lib" path="lib/json-20070829.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.11.jar"/>
 	<classpathentry kind="lib" path="lib/stax-api-1.0-2.jar"/>
-	<classpathentry kind="lib" path="lib/swingx-0.9.4.jar"/>
-	<classpathentry kind="lib" path="lib/swingx-beaninfo-0.9.4.jar"/>
-	<classpathentry kind="lib" path="lib/swingx-ws-2008_11_02.jar"/>
 	<classpathentry kind="lib" path="lib/looks-2.1.4.jar"/>
 	<classpathentry kind="lib" path="lib/swing-layout-1.0.jar"/>
 	<classpathentry kind="lib" path="lib/commons-httpclient-3.1.jar"/>
@@ -21,5 +18,8 @@
 	<classpathentry kind="lib" path="lib/commons-lang-2.2.jar"/>
 	<classpathentry kind="lib" path="lib/facebook-java-api-3.0.5-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="lib/facebook-java-api-schema-3.0.5-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-beaninfo-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-ws-1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
